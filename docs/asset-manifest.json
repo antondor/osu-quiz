@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/osu-quiz/static/css/main.c6f6ddb7.css",
+    "main.js": "/osu-quiz/static/js/main.4d57798d.js",
+    "index.html": "/osu-quiz/index.html",
+    "main.c6f6ddb7.css.map": "/osu-quiz/static/css/main.c6f6ddb7.css.map",
+    "main.4d57798d.js.map": "/osu-quiz/static/js/main.4d57798d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c6f6ddb7.css",
+    "static/js/main.4d57798d.js"
+  ]
+}
