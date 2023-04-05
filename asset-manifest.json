@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/antondor/osu-quiz/static/css/main.c6f6ddb7.css",
+    "main.js": "/antondor/osu-quiz/static/js/main.6151a381.js",
+    "index.html": "/antondor/osu-quiz/index.html",
+    "main.c6f6ddb7.css.map": "/antondor/osu-quiz/static/css/main.c6f6ddb7.css.map",
+    "main.6151a381.js.map": "/antondor/osu-quiz/static/js/main.6151a381.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c6f6ddb7.css",
+    "static/js/main.6151a381.js"
+  ]
+}
