@@ -2,7 +2,7 @@ async function startServer() {
     const express = require('express');
     const cors = require('cors');
     const app = express();
-    const apiKey = require('../config');
+    const apiKey = process.env.API_KEY;
     app.use(cors());
   
     function getRandomInt(max) {
@@ -46,9 +46,9 @@ async function startServer() {
       return shuffled.slice(0, count);
     }
   
-    const port = 3002;
-    app.listen(port, () => {
-      console.log(`Server running at http://localhost:${port}`);
+    const PORT = process.env.PORT || 3002;
+    app.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}`);
     });
   }
   
