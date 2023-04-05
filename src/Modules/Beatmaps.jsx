@@ -7,7 +7,7 @@ function Beatmaps() {
 
   const fetchBeatmaps = useCallback(() => {
     try {
-      axios.get("http://localhost:3002/beatmaps")
+      axios.get("https://osu-music-quiz.herokuapp.com/beatmaps")
       .then(response => {
         const parsedData = response.data;
         setBeatmaps(parsedData);
@@ -19,7 +19,7 @@ function Beatmaps() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:3002/beatmaps')
+      .get('https://osu-music-quiz.herokuapp.com/beatmaps')
       .then(response => {
         const parsedData = response.data;
         setBeatmaps(parsedData);
