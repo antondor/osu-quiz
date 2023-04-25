@@ -9,7 +9,7 @@ async function startServer() {
       return Math.floor(Math.random() * max);
     }
   
-    const randomDate = new Date(Date.now() - getRandomInt(8) * 365 * 24 * 60 * 60 * 1000);
+    const randomDate = new Date(Date.now() - getRandomInt(9) * 365 * 24 * 60 * 60 * 1000);
   
     app.get('/beatmaps', async (req, res) => {
       try {

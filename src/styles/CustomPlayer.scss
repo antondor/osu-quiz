@@ -1,0 +1,58 @@
+.player-container {
+    width: 400px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+
+    & button {
+        background: transparent;
+        height: 25px;
+        width: 35px;
+        border: none;
+
+        &:hover {
+            color: #456674;
+        }
+    }
+
+    & .player-controls {
+
+        display: flex;
+
+        & .player-volume {
+            width: 40%;
+        }
+
+        & .player-button-play {
+            margin-right: 7px;
+            font-size: 20px;
+        }
+
+        & .player-duration {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            & input {
+                flex: 4;
+                width: 100%;
+            }
+
+            & span{
+                margin: 0 5px;
+                font-size: 15px;
+                flex: 1;
+                text-align: center;
+            }
+        }
+
+        & .player-volume-button {
+            margin-left: 15px;
+            margin-right: 7px;
+            font-size: 20px;
+        }
+    }
+
+}
+

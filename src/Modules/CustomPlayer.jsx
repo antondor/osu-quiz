@@ -1,13 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react';
+import "../styles/CustomPlayer.scss";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faVolumeXmark, faVolumeHigh, faPlay, faPause } from '@fortawesome/free-solid-svg-icons'
 
-function CustomPlayer({ url }) {
+function CustomPlayer({ url, setIsPlaying, isPlaying }) {
   const audioRef = useRef();
-  const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [volume, setVolume] = useState(1);
-
-  useEffect(() => {
+  const [volumeIcon, setVolumeIcon] = useState(faVolumeHigh);
+  
+    useEffect(() => {
     audioRef.current.addEventListener('timeupdate', handleTimeUpdate);
     audioRef.current.addEventListener('durationchange', handleDurationChange);
     audioRef.current.addEventListener('ended', handleEnd);
@@ -41,8 +44,10 @@ function CustomPlayer({ url }) {
   };
 
   const handleVolumeChange = (event) => {
-    setVolume(event.target.value);
-    audioRef.current.volume = event.target.value;
+    const newVolume = event.target.value;
+    setVolume(newVolume);
+    audioRef.current.volume = newVolume;
+    setVolumeIcon(newVolume === '0' ? faVolumeXmark : faVolumeHigh);
   };
 
   const handleSeek = (event) => {
@@ -50,6 +55,14 @@ function CustomPlayer({ url }) {
     audioRef.current.currentTime = seekTime;
     setCurrentTime(seekTime);
   };
+
+  const handleVolumeButtonClick = () => {
+    const newVolume = volume === 0 ? 1 : 0;
+    setVolume(newVolume);
+    setVolumeIcon(newVolume === 0 ? faVolumeXmark : faVolumeHigh);
+    audioRef.current.volume = newVolume;
+  };
+  
 
   useEffect(() => {
     if (isPlaying) {
@@ -63,31 +76,41 @@ function CustomPlayer({ url }) {
     <div className='player-container'>
       <audio ref={audioRef} src={url} preload="metadata"></audio>
       <div className="player-controls">
-        {isPlaying ? (
-          <button onClick={handlePause}>Pause</button>
-        ) : (
-          <button onClick={handlePlay}>Play</button>
-        )}
-        <input
-          type="range"
-          min={0}
-          max={100}
-          value={(currentTime / duration) * 100 || 0}
-          onChange={handleSeek}
-        />
-        <span>
-          {new Date(currentTime * 1000).toISOString().substr(11, 8)} /{' '}
-          {new Date(duration * 1000).toISOString().substr(11, 8)}
-        </span>
-        <input
-          type="range"
-          min={0}
-          max={1}
-          step={0.01}          
-          value={volume}
-          onChange={handleVolumeChange}
-        />
-      </div>
+          {isPlaying ? 
+            (<button onClick={handlePause} className='player-button-play'><FontAwesomeIcon icon={faPause} /></button>) : 
+            (<button onClick={handlePlay} className='player-button-play'><FontAwesomeIcon icon={faPlay} /></button>)
+          }
+          <div className='player-duration'>
+            <span>
+              {new Date(currentTime * 1000).toISOString().substr(14, 5)}
+            </span>
+            <input
+              type="range"
+              min={0}
+              max={100}
+              value={(currentTime / duration) * 100 || 0}
+              onChange={handleSeek}
+            />
+            <span>
+              {new Date(duration * 1000).toISOString().substr(14, 5)}
+            </span>
+          </div>
+          <button
+            className='player-volume-button'
+            onClick={handleVolumeButtonClick}
+          >
+            <FontAwesomeIcon icon={volumeIcon} />
+          </button>
+          <input
+            className='player-volume'
+            type="range"
+            min={0}
+            max={1}
+            step={0.05}
+            value={volume}
+            onChange={handleVolumeChange}
+          />
+        </div>
     </div>
   );
 }

@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
+import CustomPlayer from './CustomPlayer';
 
 function Beatmaps() {
   const [beatmaps, setBeatmaps] = useState([]);
   const [current, setCurrent] = useState(null);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const fetchBeatmaps = useCallback(() => {
     try {
@@ -41,13 +43,16 @@ function Beatmaps() {
     try {
       if (current && current.beatmapset_id === beatmap.beatmapset_id) {
         alert("Correct!");
+        setIsPlaying(false);
         fetchBeatmaps();
       } else {
         alert(`Wrong :( Correct beatmap is ${current.artist} - ${current.title}`);
+        setIsPlaying(false);
         fetchBeatmaps();
       }
     } catch (error) {
       alert(`Error loading audio. ${error.message}`);
+      setIsPlaying(false);
       fetchBeatmaps();
     }
   };
@@ -64,11 +69,7 @@ function Beatmaps() {
       }}>
       <div className='beatmaps-container'>
         {current && (
-          <audio
-            src={`https://b.ppy.sh/preview/${current.beatmapset_id}.mp3`}
-            controls
-            onError={handleAudioError}
-          />
+          <CustomPlayer url={`https://b.ppy.sh/preview/${current.beatmapset_id}.mp3`} setIsPlaying={setIsPlaying} isPlaying={isPlaying} />
         )}
         <div className='button-container'>
           {beatmaps.map((beatmap, index) => (
