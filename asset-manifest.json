@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/osu-quiz/static/css/main.c6f6ddb7.css",
-    "main.js": "/osu-quiz/static/js/main.4d57798d.js",
+    "main.css": "/osu-quiz/static/css/main.09a985a9.css",
+    "main.js": "/osu-quiz/static/js/main.ecf866ed.js",
     "index.html": "/osu-quiz/index.html",
-    "main.c6f6ddb7.css.map": "/osu-quiz/static/css/main.c6f6ddb7.css.map",
-    "main.4d57798d.js.map": "/osu-quiz/static/js/main.4d57798d.js.map"
+    "main.09a985a9.css.map": "/osu-quiz/static/css/main.09a985a9.css.map",
+    "main.ecf866ed.js.map": "/osu-quiz/static/js/main.ecf866ed.js.map"
   },
   "entrypoints": [
-    "static/css/main.c6f6ddb7.css",
-    "static/js/main.4d57798d.js"
+    "static/css/main.09a985a9.css",
+    "static/js/main.ecf866ed.js"
   ]
 }
