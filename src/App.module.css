@@ -1,0 +1,11 @@
+.appWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.app {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+

@@ -1,0 +1,26 @@
+.audioWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.playImg {
+    width: 150px;
+}
+
+.playButton:hover {
+    cursor: pointer;
+}
+
+/* .volume {
+    background-color: #ff0000;
+    position: absolute;
+    display: flex;
+} */
+
+.playButton {
+    background: transparent;
+    border: 0;
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "TorusPro-SemiBold";
+    src: local("TorusPro-SemiBold"),
+     url("assets/fonts/TorusPro-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "TorusPro-Regular";
+    src: local("TorusPro-Regular"),
+     url("assets/fonts/TorusPro-Regular.ttf") format("truetype");
+    font-weight: normal;
+}
+
+* {
+    font-family: "TorusPro-SemiBold";
+}
+
+body {
+    margin: 0;
+    background-color: #F3EEEA;
+}
