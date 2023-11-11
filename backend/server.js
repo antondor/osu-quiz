@@ -2,8 +2,10 @@ import express from 'express';
 import axios from 'axios';
 import cors from 'cors';
 import moment from 'moment';
+import dotenv from 'dotenv';
+dotenv.config();
 
-const apiKey = process.env.API_KEY || 'c1a02998c78c5e4f7771c3976dfc9248a523218b';
+const apiKey = process.env.API_KEY;
 const app = express();
 const port = 3001;
 
