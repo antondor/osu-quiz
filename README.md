@@ -3,6 +3,8 @@
 In this game you should choose the right answer between the artist and the song title of the music that is currently playing.
 Every song has a beatmap in a rhythm game called osu!, background of which beatmap you can see on your screen.
 
+![image](https://github.com/antondor/osu-quiz/assets/112825341/0d49cbcc-6e16-498e-96fa-3bdf39fb4a4e)
+
 Good luck and have fun!
 
 To be able to run the server properly, you should obtain an osu! api v1 token. To get the token you should register on <b>osu! official website</b> https://osu.ppy.sh/, then you can obtain your own api token here https://osu.ppy.sh/p/api.
