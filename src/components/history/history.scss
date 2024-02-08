@@ -1,0 +1,67 @@
+.history{
+  background: #b0a695;
+  padding: 24px;
+
+  &__header{
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title{
+    flex-basis: 100%;
+    margin-left: 92px;
+    font-size: 20px;
+    text-decoration: underline;
+
+    &--empty{
+      margin-left: 0;
+    }
+  }
+  
+  &__body{
+    max-height: calc(100vh - 250px);
+    overflow: auto;
+  }
+
+  &__item{
+    text-align: center;
+    margin-bottom: 1rem;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+
+    &--answer{
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      margin: 0;
+      margin-bottom: 1rem;
+      pointer-events: none;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+
+
+    &--success{
+      border-color: hsl(120, 54%, 52%);
+    }
+
+    &--fail{
+      border-color: hsl(0, 54%, 52%);
+    }
+  }
+
+  &__img{
+    width:500px;
+    max-width: 100%;
+    border-radius: var(--border-radius-main-block);
+
+    cursor: pointer;
+  }
+
+
+}

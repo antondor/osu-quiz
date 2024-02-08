@@ -1,0 +1,39 @@
+:root {
+  --border-radius-main-block: 17px;
+}
+
+#root {
+  height: 100vh;
+}
+
+.app-container {
+  max-width: 1048px;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+.container {
+  padding: 0 24px;
+}
+
+.button-common {
+  cursor: pointer;
+  font-size: 16px;
+  /* width: 500px;*/
+  height: 50px;
+  background-color: #f3eeea;
+  border: 2px solid #2a2226;
+  color: #2a2226;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+.button-common:hover {
+  border-color: #807179;
+}
+
+.button-common:active {
+  transform: translateY(1px);
+  background-color: #e9e3de;
+}

@@ -1,129 +1,61 @@
 .main {
-    height: 94vh;
-    width: 100%;
-    background-color: #B0A695;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* border-left: 2px solid #2a2226;
+  height: 100%;
+  background-color: #b0a695;
+  display: flex;
+  flex-direction: column;
+  border-bottom-left-radius: var(--border-radius-main-block);
+  border-bottom-right-radius: var(--border-radius-main-block);
+  /* border-left: 2px solid #2a2226;
     border-right: 2px solid #2a2226; */
 }
 
 .mainWrapper {
-    width: 97%;
-    height: 97%;
-    border-radius: 17px;
-    background-color: #EBE3D5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border: 2px solid #2a2226;
+  height: 100%;
+  /* width: 100%; */
+  border-radius: 17px;
+  background-color: #ebe3d5;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid #2a2226;
+}
+
+.mainToolbar {
+  display: flex;
+  margin-top: 1rem;
+  align-self: flex-start;
 }
 
 .buttonNewMaps {
-    width: 200px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
-    background-color: #F3EEEA;
-    border: 2px solid #2a2226;
-    color: #2a2226;
-    border-radius: 5px;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  background-color: #f3eeea;
+  border: 2px solid #2a2226;
+  color: #2a2226;
+  border-radius: 5px;
 
-    &:hover {
-        border-color: #807179;
-    }
+  &:hover {
+    border-color: #807179;
+  }
 
-    &:active {
-        transform: translateY(1px);
-        background-color: #e9e3de;
-    }
+  &:active {
+    transform: translateY(1px);
+    background-color: #e9e3de;
+  }
 }
 
 .audio {
-    width: 200px;
-    height: 100px;
-    display: block;
-}
-
-.playerWrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.guessCount {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.imageWithPlay {
-    position: relative;
-}
-
-.audioControls {
-    position: absolute;
-    right: 371px;
-    top: 49px;
+  width: 200px;
+  height: 100px;
+  display: block;
 }
 
 .buttonAnswerWrapper {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.buttonAnswer {
-    cursor: pointer;
-    font-size: 16px;
-    width: 500px;
-    height: 50px;
-    background-color: #F3EEEA;
-    border: 2px solid #2a2226;
-    color: #2a2226;
-    border-radius: 8px;
-    margin-bottom: 5px;
-
-    &:first-child {
-        margin-top: 20px;
-    }
-
-    &:hover {
-        border-color: #807179;
-    }
-
-    &:active {
-        transform: translateY(1px);
-        background-color: #e9e3de;
-    }
-}
-
-.beatmapImage {
-    border-radius: 20px;
-    border: 2px solid #2a2226;
-}
-
-.correct {
-    width: 300px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    font-size: 75px;
-    color: #2a2226;
-    background-color: #EBE3D5;
-    border: 4px solid #2a2226;
-    border-radius: 15px;
-}
-
-.incorrect {
-    border: 2px solid red;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
