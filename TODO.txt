@@ -1,9 +1,0 @@
-1. Add history for guessed beatmaps
-
-2. Add button leading to the start page
-
-3. Create volume change
-
-4. Create a difficulty selection
-
-5. Implement lazy loading
