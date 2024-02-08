@@ -19,19 +19,8 @@
   justify-content: center;
   flex-basis: 100%;
   /* width of social buttons */
-  margin-left: 84px;
 }
 .title a {
   font-size: 30px;
   color: #2a2226;
-}
-
-.socials {
-  display: flex;
-  justify-self: end;
-}
-
-.logo {
-  height: 39px;
-  margin-left: 3px;
 }
