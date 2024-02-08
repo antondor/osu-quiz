@@ -3,7 +3,7 @@
 In this game you should choose the right answer between the artist and the song title of the music that is currently playing.
 Every song has a beatmap in a rhythm game called osu!, background of which beatmap you can see on your screen.
 
-![image](https://github.com/antondor/osu-quiz/assets/112825341/0d49cbcc-6e16-498e-96fa-3bdf39fb4a4e)
+![image](https://github.com/antondor/osu-quiz/assets/112825341/7f2e88b8-b280-40dd-8a17-090f90f3a05b)
 
 Good luck and have fun!
 
